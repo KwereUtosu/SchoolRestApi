@@ -1,0 +1,112 @@
+
+{% extends "base.html" %}
+{% block content %}
+<div class="container">
+<div class="row">
+      <div class="col-md-6 col-md-push-3">
+      {% for obj in object_list %}
+      <div class="thumbnail" onclick="window.open('{% url 'detail' obj.id %}','mywindow');" style="cursor: pointer;">
+          <div class="row">
+              <div class="col-md-9">
+                  <table class="mytable table-responsive">
+                      <tr><td class="my-td-item"><h5><b>Title</b></h5></td><td><h5>{{ obj.title }}</h5></td></tr>
+                      <tr><td class="my-td-item"><h5><b>Item Type</b></h5></td><td><h5>{{ obj.item_type }}</h5></td></tr>
+                      <tr><td class="my-td-item"><h5><b>Location</b></h5></td><td><h5>{{ obj.location }}</h5></td></tr>
+
+                  </table>
+              </div>
+              <div class="col-md-3">
+                  <img class="img-responsive center" src="{{ obj.image.url }}" alt="backmyitem" width="80" height="100" style="margin: 0 auto;">
+                  <br><b><p style="font-size: 10px;text-align:center;">Posted Date</b><br>{{ obj.date }}</p>
+              </div>
+          </div>
+          <div class="row">
+              <div class="more-detail-div col-md-12">
+                  <a class="">More Detail</a>
+              </div>
+          </div>
+      </div>
+      {% endfor %}
+
+          <div class="pagination" id="my_centered_buttons">
+              <table class="pagination-table table-responsive">
+                <span class="step-links">
+                    {% if object_list.has_previous %}
+                        <tr><td><button class="btn btn-info"><a href="?page=1">&laquo; first</a></button></td>
+                        <td><button class="btn btn-info"><a href="?page={{ object_list.previous_page_number }}">previous</a></button></td>
+                    {% endif %}
+                <span class="current">
+                    <td><button class="btn btn-info">{{ object_list.number }} / {{ object_list.paginator.num_pages }}</button></td>
+                </span>
+                    {% if object_list.has_next %}
+                        <td><button class="btn btn-info"><a href="?page={{ object_list.next_page_number }}">next</a></button></td>
+                            <td><button class="btn btn-info"><a href="?page={{ object_list.paginator.num_pages }}">last &raquo;</a></button></td></tr>
+                    {% endif %}
+                </span>
+              </table>
+          </div>
+
+  </div>
+
+
+  <div class="sidebar-1 col-md-3 col-md-pull-6">
+      <div class="thumbnail-center">
+            <font size="3">
+            <p>Search Your lost Item</p>
+            </font>
+             <div id="search-bar">
+                <form action="">
+                    <input type="text" placeholder="Search.." name='q' value="{{ request.GET.q }}">
+                </form>
+             </div>
+      </div>
+      <div class="thumbnail-center">
+            <font size="3">
+             <p>Search by Category</p>
+            </font>
+
+      </div>
+      <ul type="none">
+          <li><a href="/category/marksheet">Marksheet</a></li>
+          <li><a href="/category/passport">Passport</a></li>
+          <li><a href="/category/card">Card</a></li>
+          <li><a href="/category/document">Document</a></li>
+          <li><a href="/category/mobile">Mobile</a></li>
+          <li><a href="/category/laptop">Laptop</a></li>
+          <li><a href="/category/gadget">Electronic gadgets</a></li>
+          <li><a href="/category/wallet&purse">Wallet and Purse</a></li>
+          <li><a href="/category/bag">Bag</a></li>
+          <li><a href="/category/key">Key</a></li>
+      </ul>
+
+  </div>
+
+
+  <div class="col-md-3">
+      <div class="thumbnail-center">
+            <font size="3">
+             <p>Change your language</p>
+            </font>
+      </div>
+      <div id="google_translate_element">
+      </div>
+  </div>
+  </div>
+</div>
+<div class="modal fade" id="myModal" role="dialog">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">Request Done</h4>
+                    </div>
+                <div class="modal-body">
+                <p>Your request has been done.</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+                </div>
+            </div>
+</div>
+ {% endblock %}

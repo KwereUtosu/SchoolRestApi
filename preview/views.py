@@ -5,6 +5,11 @@ from rest_framework.generics import ListAPIView
 from rest_framework import status
 from .models import School
 from .serializer import SchoolSerializer
+from django.views import generic
+from .models import ContactHelp
+from django.urls import reverse_lazy
+from django.shortcuts import get_object_or_404
+
 
 # Create your views here.
 
@@ -30,7 +35,20 @@ class SchoolView(APIView):
         except:
             return Response(status=status.HTTP_400_BAD_REQUEST)
 
-    def get(self, request, pk, format=None):
+    def delete(self, request, pk, format=None):
         school = School.objects.dates(pk=pk)
         school.delete()
         return Response(status=status.HTTP_200_OK)
+
+class Contact_page(generic.DetailView):
+    model = ContactHelp
+    fields = ['name', 'email', 'query']
+    # slug_field = 'name'
+    # slug_url_kwarg = 'name'
+    template_name = 'contacthelp.html'
+    context_object_name = 'contact'
+    # success_url = reverse_lazy('index')
+    # return render(request, "static_page/about_us.html", {"title": title})
+    # def contacthelp_request(request, primary_key):
+    #     book = get_object_or_404(ContactHelp, pk=primary_key)
+    #     return(render(request, 'contacthelp.html'))

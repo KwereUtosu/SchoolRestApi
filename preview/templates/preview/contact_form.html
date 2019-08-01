@@ -11,7 +11,7 @@
          <div class="about-heading">
                 <b>What can we help you with?</b>
             </div>    <hr>
-        <form class="form-herizontal" action="" method="post" enctype="multipart/form-data">
+        <form class="form-herizontal" action="{% url 'contact' %}" method="post" enctype="multipart/form-data">
             {% csrf_token %}
               {% if form.errors %}
                 <p>{{ form.errors }}</p>

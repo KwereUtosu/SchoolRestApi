@@ -3,12 +3,12 @@ from django.utils import timezone
 from PIL import Image
 from django.core.files.uploadedfile import InMemoryUploadedFile
 from io import BytesIO
-import os
+import sys
 
 
 # Create your models here.
 def get_uplaod_file_name(image, filename):
-    return u'photos/%s/%s_%s' % (str(image.owner),
+    return u'photos/%s/%s_%s' % (str(image.name),
                                  str(timezone.now()).replace('.', '_'),
                                  filename)
 
@@ -24,7 +24,7 @@ class Teacher(models.Model):
     dob = models.DateField(null=True)
     address = models.CharField(max_length=300)
 
-class ContactHelp(models.Model):
+class Contact(models.Model):
     name = models.CharField(max_length=250)
     email = models.EmailField(blank=False, null=False)
     query = models.TextField(blank=False, null=False)
@@ -32,18 +32,20 @@ class ContactHelp(models.Model):
     image = models.ImageField(default="add Item image",
                               upload_to=get_uplaod_file_name)
 
-    def save(self):
-        im = Image.open(self.image)
-        output = BytesIO()
-        im = im.resize((500, 500))
+    # def save(self):
+    #     im = Image.open(self.image)
+    #     output = BytesIO()
+    #     im = im.resize((500, 500))
+    #
+    #     im.save(output, format='PNG', optimize=True, quality=95)
+    #     output.seek(0)
+    #
+    #     self.image = InMemoryUploadedFile(output, 'ImageField', "%s.png" % self.image.name.split('.')[0], 'image/jpeg',
+    #                                       sys.getsizeof(output), None)
+    #
+    #     self.save()
 
-        im.save(output, format='PNG', optimize=True, quality=95)
-        output.seek(0)
-
-        self.image = InMemoryUploadedFile(output, 'ImageField', "%s.png" % self.image.name.split('.')[0], 'image/jpeg',
-                                          sys.getsizeof(output), None)
-
-        # super(Report_item, self).save()
+        # super(self).save()
 
     def __str__(self):
         return self.query

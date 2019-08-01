@@ -1,0 +1,136 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head profile="http://www.w3.org/2005/10/profile">
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/png" href="{% static 'img/fevicon.png' %}" />
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-125393309-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-125393309-1');
+</script>
+
+
+
+    <style>
+.fb-share-button{
+margin-top:0 auto%;
+width:100%!important;
+height:100%!important;
+
+}
+
+.share-table{
+border-collapse: separate;
+            border-spacing: 55px 1px !important;
+            border: 0px !important;
+
+}
+.request-to-return{
+
+word-spacing: -10px!important;
+}
+
+        </style>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href='{% static "css/base.css" %}'>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+</head>
+<body>
+
+<nav class="navbar navbar-default navbar-fixed-top ">
+    <div class="container">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+{#      <a class="navbar-brand" href="{% url 'preview:index' %}">FindMyItem</a>#}
+
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class=""><a href="#"><span class="glyphicon glyphicon-home"></span>&nbsp;&nbsp;Home</a></li>
+        <li><a href="#"><span class="glyphicon glyphicon-edit"></span>&nbsp;&nbsp;Report</a></li>
+      </ul>
+          {% if user.is_authenticated %}
+        <ul class="nav navbar-nav navbar-left">
+        <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true"><span class="glyphicon glyphicon-bullhorn">&nbsp;Notification (<b>{{ count }}</b>)</span></a>
+
+            <ul class="dropdown-menu notify-drop">
+            <!-- end notify title -->
+            <!-- notify content -->
+            <div class="drop-content">
+            {% if notification %}
+                <table class="notify-table">
+                {% for n in notification %}
+                    <tr><td><p><a href="#"><b>{{n.Name}}</b> requested for the item</a></p></td></tr>
+                {% endfor %}
+                </table>
+                <hr>
+{#                <p><a href="{% url 'preview:readnotification' %}">View All Notification</a></p>#}
+            {% else %}
+             <div class="thumbnail-center">
+                 <font size="4">
+{#                    <p><a href="{% url 'preview:readnotification' %}">View old Notification</a></p>#}
+                 </font>
+             </div>
+            {% endif %}
+            </div>
+          </ul>
+        </li>
+      </ul>
+        {% endif %}
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+      {% if not user.is_authenticated %}
+            <li><a href="#"><span class="glyphicon glyphicon-user"></span>&nbsp;Sign Up</a></li>
+            <li><a href="#"><span class="glyphicon glyphicon-log-in"></span>&nbsp;Login</a></li>
+      {% else %}
+          <li><a href="#"><span class="glyphicon glyphicon-user"></span>&nbsp;{{ user.username }}</a></li>
+          <li><a href="#"><span class="glyphicon glyphicon-log-out"></span>&nbsp;logout</a></li>
+      </ul>
+        </li>
+        {% endif %}
+        </ul>
+    </div></div>
+        </div>
+</nav>
+<div class="mobile-main-header">
+<div class="mobile-header headerrow">
+{#    <div class="col-md-12 mob-header" style="text-align:center;">#}
+{#        <a href="{% url 'preview:index' %}">FindMyItem</a>#}
+{#    </div>#}
+</div>
+<table class="table mobile-header-table table-reponsive mob-header-table">
+    <tr>
+{#        <td class="mobile-header-td"><a href="{% url 'preview:index' %}"><span class="glyphicon glyphicon-home"></span>&nbsp Home</a></td>#}
+{#        <td class="mobile-header-td"><a href="{% url 'preview:report' %}"><span class="glyphicon glyphicon-edit"></span>&nbsp;&nbsp;Report</a></td>#}
+        {% if not user.is_authenticated %}
+{#                <td class="mobile-header-td"><span class="glyphicon glyphicon-bullhorn">&nbsp;</span>Notifs</a></td>#}
+
+        {% else %}
+{#        <td class="mobile-header-td"><a href="{% url 'preview:readnotification' %}"><span class="glyphicon glyphicon-bullhorn">&nbsp;</span>Notifs<small>(<b>{{ count }}</b>)</small></a></td>#}
+
+         {% endif %}
+        {% if not user.is_authenticated %}
+{#        <td class="mobile-header-td"> <a href="{% url 'login' %}"><span class="glyphicon glyphicon-log-in"></span>&nbsp;Login</a></td>#}
+        {% else %}
+{#        <td class="mobile-header-td"><a href="{% url 'preview:profile' user.username %}"><span class="glyphicon glyphicon-user"></span>&nbsp;{{ user.username }}</a></td>#}
+        {% endif %}
+    </tr>
+
+</table>
+
+</div>
+<br>

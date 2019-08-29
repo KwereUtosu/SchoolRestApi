@@ -16,13 +16,20 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, re_path, include
 import preview.views as py_views
+from django.conf.urls.static import static
+from django.conf import settings
+
 
 urlpatterns = [
     path(r'admin/', admin.site.urls),
     path(r'', py_views.AllSchools.as_view()),
-    re_path(r'(?P<pk>\d+)', py_views.SchoolView.as_view()),
+    # re_path(r'(?P<pk>\d+)', py_views.SchoolView.as_view()),
 ]
 
 urlpatterns += [
     path(r'preview/', include('preview.urls'))
 ]
+
+
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

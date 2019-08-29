@@ -2,21 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3bd06c63-2ce4-4189-ab8b-ad94fd2ad337" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/preview/migrations/0002_contacthelp_teacher.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/preview/migrations/0003_auto_20190728_1816.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/preview/templates/preview/contact_form.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/preview/templates/preview/footers.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/preview/templates/preview/headers.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/preview/templates/preview/indexx.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/preview/migrations/0004_personnel.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/preview/templates/preview/personnel_detail.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/preview/templates/preview/personnel_form.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/preview/templates/preview/personnel_list.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Django_Preview/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/Django_Preview/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Django_Preview/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/Django_Preview/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/preview/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/preview/forms.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/preview/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/preview/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/preview/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/preview/templates/preview/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/preview/templates/contacthelp.html" beforeDir="false" afterPath="$PROJECT_DIR$/preview/templates/contacthelp.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/preview/templates/footer.html" beforeDir="false" afterPath="$PROJECT_DIR$/preview/templates/preview/footer.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/preview/templates/form_template.html" beforeDir="false" afterPath="$PROJECT_DIR$/preview/templates/preview/form_template.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/preview/templates/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/preview/templates/preview/header.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/preview/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/preview/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/preview/static/base.css" beforeDir="false" afterPath="$PROJECT_DIR$/preview/static/css/base.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/preview/templates/preview/contact_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/preview/templates/preview/contact_detail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/preview/templates/preview/contact_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/preview/templates/preview/contact_list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/preview/templates/preview/footers.html" beforeDir="false" afterPath="$PROJECT_DIR$/preview/templates/preview/footers.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/preview/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/preview/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/preview/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/preview/views.py" afterDir="false" />
     </list>
@@ -50,11 +48,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/preview/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="203">
-              <caret line="80" column="19" selection-start-line="80" selection-start-column="19" selection-end-line="80" selection-end-column="19" />
+            <state relative-caret-position="1632">
+              <caret line="107" column="90" selection-start-line="107" selection-start-column="90" selection-end-line="107" selection-end-column="90" />
               <folding>
                 <element signature="e#0#35#0" expanded="true" />
               </folding>
@@ -63,10 +61,19 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Django_Preview/settings.py">
+        <entry file="file://$PROJECT_DIR$/preview/templates/preview/personnel_detail.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="118">
-              <caret line="135" selection-start-line="135" selection-end-line="135" />
+            <state relative-caret-position="323">
+              <caret line="19" column="100" selection-start-line="19" selection-start-column="100" selection-end-line="19" selection-end-column="100" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/preview/templates/preview/footers.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="473">
+              <caret line="40" selection-start-line="40" selection-end-line="40" />
             </state>
           </provider>
         </entry>
@@ -74,26 +81,35 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/preview/templates/preview/contact_form.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="14" column="28" selection-start-line="14" selection-start-column="28" selection-end-line="14" selection-end-column="28" />
+            <state relative-caret-position="221">
+              <caret line="13" column="108" selection-start-line="13" selection-start-column="108" selection-end-line="13" selection-end-column="108" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/preview/templates/preview/base.html">
+        <entry file="file://$PROJECT_DIR$/preview/templates/preview/contact_detail.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="8" column="27" selection-start-line="8" selection-start-column="27" selection-end-line="8" selection-end-column="27" />
+            <state relative-caret-position="255">
+              <caret line="15" column="73" selection-start-line="15" selection-start-column="73" selection-end-line="15" selection-end-column="73" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/preview/templates/index.html">
+        <entry file="file://$PROJECT_DIR$/preview/templates/preview/personnel_form.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-442">
-              <caret line="1" selection-start-line="1" selection-end-line="1" selection-end-column="33" />
+            <state relative-caret-position="221">
+              <caret line="13" column="60" selection-start-line="13" selection-start-column="60" selection-end-line="13" selection-end-column="60" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/preview/templates/preview/indexx.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="68">
+              <caret line="4" column="5" selection-start-line="4" selection-start-column="5" selection-end-line="4" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -101,8 +117,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/preview/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" column="22" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="22" />
+            <state relative-caret-position="170">
+              <caret line="11" column="77" selection-start-line="11" selection-start-column="77" selection-end-line="11" selection-end-column="77" />
               <folding>
                 <element signature="e#0#28#0" expanded="true" />
               </folding>
@@ -113,8 +129,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/preview/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="43" column="70" selection-start-line="43" selection-start-column="70" selection-end-line="43" selection-end-column="70" />
+            <state relative-caret-position="85">
+              <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
               <folding>
                 <element signature="e#0#28#0" expanded="true" />
               </folding>
@@ -123,31 +139,13 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/django/core/files/uploadedfile.py">
+        <entry file="file://$PROJECT_DIR$/Django_Preview/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="81" column="8" selection-start-line="81" selection-start-column="8" selection-end-line="81" selection-end-column="8" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/preview/templates/preview/headers.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="140">
-              <caret line="56" column="49" selection-start-line="56" selection-start-column="46" selection-end-line="56" selection-end-column="49" />
+            <state relative-caret-position="510">
+              <caret line="34" column="80" selection-start-line="34" selection-start-column="80" selection-end-line="34" selection-end-column="80" />
               <folding>
-                <element signature="e#1902#1908#0#HTML" expanded="true" />
+                <element signature="e#638#670#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/preview/templates/preview/indexx.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="3" column="16" selection-start-line="3" selection-start-column="16" selection-end-line="3" selection-end-column="16" />
             </state>
           </provider>
         </entry>
@@ -168,6 +166,7 @@
       <find>feed:</find>
       <find>fe</find>
       <find>pre</find>
+      <find>im</find>
     </findStrings>
     <replaceStrings>
       <replace>preview:</replace>
@@ -183,7 +182,6 @@
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/Django_Preview/__init__.py" />
         <option value="$PROJECT_DIR$/Py_Preview/forms.py" />
-        <option value="$PROJECT_DIR$/Django_Preview/urls.py" />
         <option value="$PROJECT_DIR$/Py_Preview/templates/base.html" />
         <option value="$PROJECT_DIR$/Py_Preview/templates/contacthelp.html" />
         <option value="$PROJECT_DIR$/Py_Preview/templates/index.html" />
@@ -197,20 +195,28 @@
         <option value="$PROJECT_DIR$/preview/templates/hey.html" />
         <option value="$PROJECT_DIR$/preview/templates/contact_form.html" />
         <option value="$PROJECT_DIR$/preview/templates/preview/base.html" />
-        <option value="$PROJECT_DIR$/preview/templates/preview/footers.html" />
-        <option value="$PROJECT_DIR$/preview/templates/preview/indexx.html" />
-        <option value="$PROJECT_DIR$/preview/views.py" />
-        <option value="$PROJECT_DIR$/preview/templates/preview/headers.html" />
+        <option value="$PROJECT_DIR$/preview/forms.py" />
         <option value="$PROJECT_DIR$/preview/templates/preview/contact_form.html" />
+        <option value="$PROJECT_DIR$/preview/templates/preview/contact_list.html" />
+        <option value="$PROJECT_DIR$/preview/templates/preview/contact_detail.html" />
+        <option value="$PROJECT_DIR$/preview/templates/preview/headers.html" />
+        <option value="$PROJECT_DIR$/Django_Preview/urls.py" />
+        <option value="$PROJECT_DIR$/preview/templates/preview/personnel_list.html" />
+        <option value="$PROJECT_DIR$/preview/templates/preview/form_template.html" />
         <option value="$PROJECT_DIR$/preview/urls.py" />
-        <option value="$PROJECT_DIR$/preview/models.py" />
+        <option value="$PROJECT_DIR$/preview/views.py" />
+        <option value="$PROJECT_DIR$/preview/templates/preview/personnel_form.html" />
         <option value="$PROJECT_DIR$/Django_Preview/settings.py" />
+        <option value="$PROJECT_DIR$/preview/models.py" />
+        <option value="$PROJECT_DIR$/preview/templates/preview/personnel_detail.html" />
+        <option value="$PROJECT_DIR$/preview/templates/preview/indexx.html" />
+        <option value="$PROJECT_DIR$/preview/templates/preview/footers.html" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-5" />
-    <option name="y" value="4" />
+    <option name="x" value="-3" />
+    <option name="y" value="33" />
     <option name="width" value="1346" />
     <option name="height" value="688" />
   </component>
@@ -231,6 +237,11 @@
               <item name="Django_Preview" type="b2602c69:ProjectViewProjectNode" />
               <item name="Django_Preview" type="462c0819:PsiDirectoryNode" />
               <item name="Django_Preview" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Django_Preview" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Django_Preview" type="462c0819:PsiDirectoryNode" />
+              <item name="media" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Django_Preview" type="b2602c69:ProjectViewProjectNode" />
@@ -266,12 +277,15 @@
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\JoyU\PycharmProjects\Django_Preview\preview\templates\preview" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\JoyU\PycharmProjects\Django_Preview\preview\templates\preview" />
       <recent name="C:\Users\JoyU\PycharmProjects\Django_Preview\Py_Preview\templates" />
       <recent name="C:\Users\JoyU\PycharmProjects\Django_Preview\Py_Preview\static" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\JoyU\PycharmProjects\Django_Preview\media" />
+      <recent name="C:\Users\JoyU\PycharmProjects\Django_Preview\preview\static\css" />
+      <recent name="C:\Users\JoyU\PycharmProjects\Django_Preview\preview\templates\preview" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -346,23 +360,32 @@
       <workItem from="1563681820518" duration="1791000" />
       <workItem from="1563940041993" duration="1748000" />
       <workItem from="1564022084515" duration="5433000" />
-      <workItem from="1564286212039" duration="19953000" />
+      <workItem from="1564286212039" duration="20364000" />
+      <workItem from="1564714378516" duration="4629000" />
+      <workItem from="1564810645970" duration="3655000" />
+      <workItem from="1565073765633" duration="2936000" />
+      <workItem from="1565402973324" duration="19364000" />
+      <workItem from="1565838232480" duration="6001000" />
+      <workItem from="1565990877976" duration="655000" />
+      <workItem from="1566282877099" duration="140000" />
+      <workItem from="1566544054349" duration="320000" />
+      <workItem from="1567061522933" duration="597000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="66966000" />
+    <option name="totallyTimeSpent" value="105534000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23827533" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25583205" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.19967267" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.26022914" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39934534" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -371,7 +394,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="11" weight="0.45171848" />
+      <window_info anchor="bottom" id="Terminal" order="11" weight="0.3715221" />
       <window_info anchor="bottom" id="Python Console" order="12" />
       <window_info anchor="bottom" id="manage.py@Django_Preview" order="13" weight="0.36497545" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -412,13 +435,6 @@
     <entry file="file://$PROJECT_DIR$/Django_Preview/wsgi.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/manage.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="20" column="6" selection-start-line="20" selection-start-column="6" selection-end-line="20" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/preview/__init__.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -434,23 +450,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/preview/forms.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="1" column="24" selection-start-line="1" selection-start-column="24" selection-end-line="1" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Django_Preview/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="25" column="11" selection-start-line="25" selection-start-column="11" selection-end-line="25" selection-end-column="11" />
-          <folding>
-            <element signature="e#638#670#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Django_Preview/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -475,16 +474,10 @@
     <entry file="file://$PROJECT_DIR$/preview/admin.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/preview/static/base.css">
+    <entry file="file://$PROJECT_DIR$/preview/static/css/base.css">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/preview/templates/hey.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="16" selection-start-line="4" selection-start-column="11" selection-end-line="4" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/preview/templates/hey.html" />
     <entry file="file://$PROJECT_DIR$/preview/migrations/0002_contacthelp_teacher.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-131" />
@@ -514,41 +507,25 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/preview/templates/preview/footers.html">
+    <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/django/core/files/uploadedfile.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="25" selection-start-line="2" selection-start-column="25" selection-end-line="2" selection-end-column="25" />
+        <state relative-caret-position="1292">
+          <caret line="81" column="8" selection-start-line="81" selection-start-column="8" selection-end-line="81" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/photos/Fiction/2019-07-31_174215_3020880000_feppull.PNG" />
+    <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/django/views/generic/detail.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-41">
+          <caret line="11" column="4" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="4" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/preview/templates/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-442">
+        <state relative-caret-position="17">
           <caret line="1" selection-start-line="1" selection-end-line="1" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/preview/templates/preview/indexx.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="16" selection-start-line="3" selection-start-column="16" selection-end-line="3" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/preview/templates/preview/headers.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="56" column="49" selection-start-line="56" selection-start-column="46" selection-end-line="56" selection-end-column="49" />
-          <folding>
-            <element signature="e#1902#1908#0#HTML" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/preview/templates/preview/form_template.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="8" selection-start-line="7" selection-start-column="8" selection-end-line="7" selection-end-column="8" />
         </state>
       </provider>
     </entry>
@@ -559,24 +536,104 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/preview/templates/preview/contact_form.html">
+    <entry file="file://$PROJECT_DIR$/manage.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="14" column="28" selection-start-line="14" selection-start-column="28" selection-end-line="14" selection-end-column="28" />
+        <state relative-caret-position="323">
+          <caret line="20" column="6" selection-start-line="20" selection-start-column="6" selection-end-line="20" selection-end-column="6" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/django/core/files/uploadedfile.py">
+    <entry file="file://$PROJECT_DIR$/preview/forms.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="81" column="8" selection-start-line="81" selection-start-column="8" selection-end-line="81" selection-end-column="8" />
+        <state>
+          <caret column="27" selection-start-column="27" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/preview/templates/preview/personnel_list.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="15" column="68" selection-start-line="15" selection-start-column="68" selection-end-line="15" selection-end-column="68" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/preview/templates/preview/form_template.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="16" lean-forward="true" selection-start-line="6" selection-start-column="16" selection-end-line="6" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Django_Preview/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2329">
+          <caret line="137" column="23" selection-start-line="137" selection-start-column="23" selection-end-line="137" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/preview/templates/preview/contact_list.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="45" selection-start-line="15" selection-end-line="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/preview/templates/preview/headers.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="629">
+          <caret line="40" column="47" lean-forward="true" selection-start-line="40" selection-start-column="47" selection-end-line="40" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/preview/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1632">
+          <caret line="107" column="90" selection-start-line="107" selection-start-column="90" selection-end-line="107" selection-end-column="90" />
+          <folding>
+            <element signature="e#0#35#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/preview/templates/preview/personnel_detail.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="100" selection-start-line="19" selection-start-column="100" selection-end-line="19" selection-end-column="100" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/preview/templates/preview/contact_form.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="108" selection-start-line="13" selection-start-column="108" selection-end-line="13" selection-end-column="108" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/preview/templates/preview/contact_detail.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="73" selection-start-line="15" selection-start-column="73" selection-end-line="15" selection-end-column="73" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/preview/templates/preview/personnel_form.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="60" selection-start-line="13" selection-start-column="60" selection-end-line="13" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/preview/templates/preview/indexx.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="5" selection-start-line="4" selection-start-column="5" selection-end-line="4" selection-end-column="5" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/preview/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="22" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="22" />
+        <state relative-caret-position="170">
+          <caret line="11" column="77" selection-start-line="11" selection-start-column="77" selection-end-line="11" selection-end-column="77" />
           <folding>
             <element signature="e#0#28#0" expanded="true" />
           </folding>
@@ -585,28 +642,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/preview/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="43" column="70" selection-start-line="43" selection-start-column="70" selection-end-line="43" selection-end-column="70" />
+        <state relative-caret-position="85">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
           <folding>
             <element signature="e#0#28#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Django_Preview/settings.py">
+    <entry file="file://$PROJECT_DIR$/Django_Preview/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="118">
-          <caret line="135" selection-start-line="135" selection-end-line="135" />
+        <state relative-caret-position="510">
+          <caret line="34" column="80" selection-start-line="34" selection-start-column="80" selection-end-line="34" selection-end-column="80" />
+          <folding>
+            <element signature="e#638#670#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/preview/views.py">
+    <entry file="file://$PROJECT_DIR$/preview/templates/preview/footers.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="203">
-          <caret line="80" column="19" selection-start-line="80" selection-start-column="19" selection-end-line="80" selection-end-column="19" />
-          <folding>
-            <element signature="e#0#35#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="473">
+          <caret line="40" selection-start-line="40" selection-end-line="40" />
         </state>
       </provider>
     </entry>

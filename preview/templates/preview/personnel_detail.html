@@ -1,0 +1,25 @@
+{% extends "preview/base.html" %}
+
+{% block header %}
+  <h1 class="site-heading text-center text-white d-none d-lg-block">
+    <span class="site-heading-upper text-primary mb-3">Contacts Detail View</span>
+    <span class="site-heading-lower">Library Contacts Details</span>
+  </h1>
+{% endblock %}
+
+{% block content %}
+  <h1> {{ personnel.firstName }}'s Details </h1>
+
+  <p><strong>Full Name :</strong> <a href="">{{ personnel.firstName }} {{ personnel.lastName }}</a></p> <!-- author detail link not yet defined -->
+  <p><strong>Email :</strong> {{ personnel.email }}</p>
+  <p><strong>Description :</strong> {{ personnel.description }}</p>
+  <p><strong>Document :</strong> {{ personnel.document }}</p>
+    <p><strong>Video :</strong> {{ personnel.video }}</p>
+  <p><strong>Image:</strong> {{ personnel.image}}</p>
+    <img src="{{ personnel.image.url }}" height="100" width="100" border="1">
+    <object data="{{ personnel.document.url }}" height="100" width="100"> {{ personnel.document.name }}</object>
+    <br>
+    <video src="{{ personnel.video.url }}" height="500" width="500" controls>The video</video>
+
+
+{% endblock %}

@@ -1,10 +1,24 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>$Title$</title>
-</head>
-<body>
-$END$
-</body>
-</html>
+{% extends "preview/base.html" %}
+
+{% block header %}
+  <h1 class="site-heading text-center text-white d-none d-lg-block">
+    <span class="site-heading-upper text-primary mb-3">Contacts List View</span>
+    <span class="site-heading-lower">Library Contacts</span>
+  </h1>
+{% endblock %}
+
+{% block content %}
+  <h1>List Of Contacts</h1>
+  {% if contact_list %}
+  <ul style="list-style: none">
+    {% for contact in contact_list %}
+      <li>
+        ({{contact.id}}) <a href="{{ contact.get_absolute_url }}">{{ contact.name }}</a>({{contact.email}}) ({{ contact.get_absolute_url }})
+{#              ({{contact.id}}) <a href="{% url 'contact-detail' pk=contact.id %}">{{ contact.name }}</a>({{contact.email}}) ({{ contact.get_absolute_url }})#}
+      </li>
+    {% endfor %}
+  </ul>
+  {% else %}
+    <p>There are no Contacts in the library.</p>
+  {% endif %}
+{% endblock %}

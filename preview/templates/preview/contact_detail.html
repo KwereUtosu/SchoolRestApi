@@ -1,10 +1,18 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>$Title$</title>
-</head>
-<body>
-$END$
-</body>
-</html>
+{% extends "preview/base.html" %}
+
+{% block header %}
+  <h1 class="site-heading text-center text-white d-none d-lg-block">
+    <span class="site-heading-upper text-primary mb-3">Contacts Detail View</span>
+    <span class="site-heading-lower">Library Contacts Details</span>
+  </h1>
+{% endblock %}
+
+{% block content %}
+  <h1> {{ contact.name }}'s Details </h1>
+
+  <p><strong>Full Name:</strong> <a href="">{{ contact.name }}</a></p> <!-- author detail link not yet defined -->
+  <p><strong>Email Address:</strong> {{ contact.email }}</p>
+  <p><strong>Image:</strong> {{ contact.image}}</p>
+    <img src="{{ contact.image.url }}" height="100" width="100" border="1">
+
+{% endblock %}

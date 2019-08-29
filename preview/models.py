@@ -1,5 +1,6 @@
 from django.db import models
 from django.utils import timezone
+from django.urls import reverse # Used to generate URLs by reversing the URL patterns
 from PIL import Image
 from django.core.files.uploadedfile import InMemoryUploadedFile
 from io import BytesIO
@@ -8,9 +9,10 @@ import sys
 
 # Create your models here.
 def get_uplaod_file_name(image, filename):
-    return u'photos/%s/%s_%s' % (str(image.name),
-                                 str(timezone.now()).replace('.', '_'),
-                                 filename)
+    return u'photos/%s_%s' % (str(image.name), filename)
+
+def get_uplaod_file_doc_name(image, filename):
+    return u'person/%s_%s' % (str(image.firstName), filename)
 
 
 class School(models.Model):
@@ -32,20 +34,26 @@ class Contact(models.Model):
     image = models.ImageField(default="add Item image",
                               upload_to=get_uplaod_file_name)
 
-    # def save(self):
-    #     im = Image.open(self.image)
-    #     output = BytesIO()
-    #     im = im.resize((500, 500))
-    #
-    #     im.save(output, format='PNG', optimize=True, quality=95)
-    #     output.seek(0)
-    #
-    #     self.image = InMemoryUploadedFile(output, 'ImageField', "%s.png" % self.image.name.split('.')[0], 'image/jpeg',
-    #                                       sys.getsizeof(output), None)
-    #
-    #     self.save()
+    def __str__(self):
+        return self.query
 
-        # super(self).save()
+    def get_absolute_url(self):
+        """Returns the url to access a detail record for this book."""
+        return reverse('contact-detail', args=[str(self.id)])
+
+class Personnel(models.Model):
+    firstName = models.CharField(max_length=200)
+    lastName = models.CharField(max_length=200)
+    date = models.DateTimeField(default=timezone.now)
+    email = models.EmailField(blank=False, null=False)
+    description = models.TextField(blank=False, null=False)
+    image = models.ImageField(default="Add Image", upload_to=get_uplaod_file_doc_name)
+    document = models.FileField(default="Add Document", upload_to=get_uplaod_file_doc_name)
+    video = models.FileField(default="Add Video File", upload_to=get_uplaod_file_doc_name)
 
     def __str__(self):
         return self.query
+
+    def get_absolute_url(self):
+        """Returns the url to access a detail record for this book."""
+        return reverse('person-detail', args=[str(self.id)])

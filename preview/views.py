@@ -7,6 +7,7 @@ from .models import School
 from .serializer import SchoolSerializer
 from django.views import generic
 from .models import Contact
+from .models import Personnel
 from django.urls import reverse_lazy
 from django.shortcuts import get_object_or_404
 
@@ -49,20 +50,20 @@ class AllSchools(ListAPIView):
         return Response(serializer.data, status=status.HTTP_400_BAD_REQUEST)
 
 
-class SchoolView(APIView):
+# class SchoolView(APIView):
 
-    def get(self, request, pk, format=None):
-        try:
-            school = School.objects.dates(pk=pk)
-            serializer = SchoolSerializer(school)
-            return Response(serializer.data)
-        except:
-            return Response(status=status.HTTP_400_BAD_REQUEST)
-
-    def delete(self, request, pk, format=None):
-        school = School.objects.dates(pk=pk)
-        school.delete()
-        return Response(status=status.HTTP_200_OK)
+    # def get(self, request, pk, format=None):
+    #     try:
+    #         school = School.objects.dates(pk=pk)
+    #         serializer = SchoolSerializer(school)
+    #         return Response(serializer.data)
+    #     except:
+    #         return Response(status=status.HTTP_400_BAD_REQUEST)
+    #
+    # def delete(self, request, pk, format=None):
+    #     school = School.objects.dates(pk=pk)
+    #     school.delete()
+    #     return Response(status=status.HTTP_200_OK)
 
 # class Contact_page(generic.DetailView):
 #     model = Contact
@@ -77,12 +78,43 @@ class SchoolView(APIView):
 #         book = get_object_or_404(Contact, pk=primary_key)
 #         return(render(request, 'contacthelp.html'))
 
-class ContactDetailView(generic.CreateView):
+class ContactCreatView(generic.CreateView):
     model = Contact
-    paginate_by = 2
     fields = ['name', 'email', 'query', 'image']
+    paginate_by = 2
     success_url = reverse_lazy('index')
 
-    # def contact_detail_view(request, primary_key):
-    #     book = get_object_or_404(Contact, pk=primary_key)
-    #     return render(request, 'contacthelp.html', context={'book': book})
+
+class ContactUpdateView(generic.UpdateView):
+    model = Contact
+    fields = ["name", "email"]
+
+class ContactListView(generic.ListView):
+    model = Contact
+    paginate_by = 8
+
+class ContactDetailView(generic.DetailView):
+    model = Contact
+
+    def contact_detail_view(request, primary_key):
+        contact = get_object_or_404(Contact, pk=primary_key)
+        p = contact.image;
+        print("The image ***** {}", p)
+        return render(request, 'preview/contact_detail.html', context={'contact': contact})
+
+
+class PersonnelCreatView(generic.CreateView):
+    model = Personnel
+    fields = ['firstName', 'lastName', 'description', 'email', 'video', 'image', 'document']
+    success_url = reverse_lazy("index")
+
+class PersonnelListView(generic.ListView):
+    model = Personnel
+
+class PersonnelDetailView(generic.DetailView):
+    model = Personnel
+
+    def personnel_detail_view(request, primary_key):
+        personnel = get_object_or_404(Personnel, pk=primary_key)
+        return render(request, 'preview/personnel_detail.html', context={'personnel': personnel})
+
